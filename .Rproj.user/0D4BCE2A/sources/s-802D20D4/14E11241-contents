@@ -18,15 +18,11 @@ library(dplyr)
 library(ggplot2)
 
 library(readxl)
-#setwd("C:\\Users\\ASUS\\Desktop\\資料科學導論")
-#DadData <- as.data.frame(read_excel("C:\\Users\\ASUS\\Desktop\\資料科學導論\\父親教育程度.xlsx"))
-#MomData <- as.data.frame(read_excel("C:\\Users\\ASUS\\Desktop\\資料科學導論\\母親教育程度.xlsx"))
+DadData <- as.data.frame(read_excel("C:/Users/Irene/Desktop/父親教育程度.xlsx"))
+MomData <- as.data.frame(read_excel("C:/Users/Irene/Desktop/母親教育程度.xlsx"))
 
-#DadData$degree <- factor(MomData$degree, 
-#                   levels = c("國中及以下", "高中職","專科", "大學","碩士","博士") , ordered = T)
-#MomData$degree <- factor(MomData$degree, 
- #                        levels = c("國中及以下", "高中職","專科", "大學","碩士","博士") , 
-  #                       ordered = T)
+DadData$degree <- factor(MomData$degree,levels = c("國中及以下", "高中職","專科", "大學","碩士","博士") , ordered = T)
+MomData$degree <- factor(MomData$degree,levels = c("國中及以下", "高中職","專科", "大學","碩士","博士") ,ordered = T)
 ```
 
 父母親教育程度
@@ -38,31 +34,31 @@ Row
 ### 父親教育程度
 
 ```{r}
-# p <- ggplot(DadData) +
-#     geom_line(mapping = aes(x = degree, y = law, group=1),stat = "identity", color="#EA7500", size=1) +
-#     geom_line(mapping = aes(x = degree, y = students, group=1),stat = "identity", color="#66B3FF", size=1) +
-#     geom_line(mapping = aes(x = degree, y = all, group=1),stat = "identity", color="#AE8F00", size=1) +
-#     labs(x = "父親教育程度", y = "percentage (%)") + 
-#     geom_point(mapping = aes(x = degree, y = law, group=1), color = "#D26900") +
-#     geom_point(mapping = aes(x = degree, y = students, group=1), color = "#0080FF") +
-#     geom_point(mapping = aes(x = degree, y = all, group=1), color = "#796400") 
-# ggplotly(p)
+p <- ggplot(DadData) +
+    geom_line(mapping = aes(x = degree, y = law, group=1),stat = "identity", color="#EA7500", size=1) +
+    geom_line(mapping = aes(x = degree, y = students, group=1),stat = "identity", color="#66B3FF", size=1) +
+    geom_line(mapping = aes(x = degree, y = all, group=1),stat = "identity", color="#AE8F00", size=1) +
+    labs(x = "父親教育程度", y = "percentage (%)") +
+    geom_point(mapping = aes(x = degree, y = law, group=1), color = "#D26900") +
+    geom_point(mapping = aes(x = degree, y = students, group=1), color = "#0080FF") +
+    geom_point(mapping = aes(x = degree, y = all, group=1), color = "#796400")
+ggplotly(p)
 ```
 > 橘色線為台大法學院一到四年級學生學生數據；藍線為18~22大學生；土色線為１８～２２歲全國人民
 
 ### 母親教育程度
 
 ```{r}
-# q <- ggplot(MomData) +
-#     geom_line(mapping = aes(x = degree, y = law, group=1),stat = "identity", color="#EA7500", size=1) +
-#     geom_line(mapping = aes(x = degree, y = students, group=1),stat = "identity", color="#66B3FF", size=1) +
-#     geom_line(mapping = aes(x = degree, y = all, group=1),stat = "identity", color="#AE8F00", size=1) +
-#     labs(x = "母親教育程度", y = "percentage (%)") + 
-#     geom_point(mapping = aes(x = degree, y = law, group=1), color = "#D26900") +
-#     geom_point(mapping = aes(x = degree, y = students, group=1), color = "#0080FF") +
-#     geom_point(mapping = aes(x = degree, y = all, group=1), color = "#796400")
-# 
-# ggplotly(q)
+q <- ggplot(MomData) +
+    geom_line(mapping = aes(x = degree, y = law, group=1),stat = "identity", color="#EA7500", size=1) +
+    geom_line(mapping = aes(x = degree, y = students, group=1),stat = "identity", color="#66B3FF", size=1) +
+    geom_line(mapping = aes(x = degree, y = all, group=1),stat = "identity", color="#AE8F00", size=1) +
+    labs(x = "母親教育程度", y = "percentage (%)") +
+    geom_point(mapping = aes(x = degree, y = law, group=1), color = "#D26900") +
+    geom_point(mapping = aes(x = degree, y = students, group=1), color = "#0080FF") +
+    geom_point(mapping = aes(x = degree, y = all, group=1), color = "#796400")
+
+ggplotly(q)
 ```
 > 母親和父親的曲線都有明顯的不同，
 
@@ -92,15 +88,15 @@ ggplotly(f)
 Row 
 -------------------------------------
 ```{r}
-mydata <- readr::read_csv("")
-mydata
-ggplot(data = mydata) +
-  geom_line(aes(x = Years, y = 台大平均年所得, group = 1, color = "NTU")) +
-  geom_point(aes(x = Years, y = 台大平均年所得, color = "NTU")) + 
-  geom_line(aes(x = Years, y = 全國平均年所得, group = 1, color = "Taiwan")) +
-  geom_point(aes(x = Years, y = 全國平均年所得, color = "Taiwan")) +
-  scale_color_manual(values = c("#9393FF", "#AAAAFF"), name = "section") +
-  labs(x = "Years Group", y = "Average Annual Income")
+# mydata <- readr::read_csv("")
+# mydata
+# ggplot(data = mydata) +
+#   geom_line(aes(x = Years, y = 台大平均年所得, group = 1, color = "NTU")) +
+#   geom_point(aes(x = Years, y = 台大平均年所得, color = "NTU")) + 
+#   geom_line(aes(x = Years, y = 全國平均年所得, group = 1, color = "Taiwan")) +
+#   geom_point(aes(x = Years, y = 全國平均年所得, color = "Taiwan")) +
+#   scale_color_manual(values = c("#9393FF", "#AAAAFF"), name = "section") +
+#   labs(x = "Years Group", y = "Average Annual Income")
 ```
 
 
