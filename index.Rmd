@@ -96,15 +96,14 @@ ggplotly(f)
 Row 
 -------------------------------------
 ```{r}
-# mydata <- readr::read_csv("")
-# mydata
-# ggplot(data = mydata) +
-#   geom_line(aes(x = Years, y = 台大平均年所得, group = 1, color = "NTU")) +
-#   geom_point(aes(x = Years, y = 台大平均年所得, color = "NTU")) + 
-#   geom_line(aes(x = Years, y = 全國平均年所得, group = 1, color = "Taiwan")) +
-#   geom_point(aes(x = Years, y = 全國平均年所得, color = "Taiwan")) +
-#   scale_color_manual(values = c("#9393FF", "#AAAAFF"), name = "section") +
-#   labs(x = "Years Group", y = "Average Annual Income")
+mydata <- readr::read_csv("C:/Users/Irene/Desktop/台大全國平均所得比較.csv")
+ggplot(data = mydata) +
+  geom_line(aes(x = Years, y = ntu, group = 1, color = "NTU")) +
+  geom_point(aes(x = Years, y = ntu, color = "NTU")) +
+  geom_line(aes(x = Years, y = all, group = 1, color = "Taiwan")) +
+  geom_point(aes(x = Years, y = all, color = "Taiwan")) +
+  scale_color_manual(values = c("#9393FF", "#AAAAFF"), name = "section") +
+  labs(x = "Years Group", y = "Average Annual Income")
 ```
 
 
