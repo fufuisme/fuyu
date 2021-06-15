@@ -48,7 +48,7 @@ Row
 #     geom_point(mapping = aes(x = degree, y = all, group=1), color = "#796400") 
 # ggplotly(p)
 ```
-
+> 橘色線為台大法學院一到四年級學生學生數據；藍線為18~22大學生；土色線為１８～２２歲全國人民
 
 ### 母親教育程度
 
@@ -64,6 +64,7 @@ Row
 # 
 # ggplotly(q)
 ```
+> 母親和父親的曲線都有明顯的不同，
 
 收入排名
 =====================================     
@@ -85,33 +86,51 @@ f <- ggplot(data = dataset) +
 # 呈現
 ggplotly(f)
 ```
-
-
 家庭所得
 =====================================     
    
 Row 
 -------------------------------------
+```{r}
+mydata <- readr::read_csv("")
+mydata
+ggplot(data = mydata) +
+  geom_line(aes(x = Years, y = 台大平均年所得, group = 1, color = "NTU")) +
+  geom_point(aes(x = Years, y = 台大平均年所得, color = "NTU")) + 
+  geom_line(aes(x = Years, y = 全國平均年所得, group = 1, color = "Taiwan")) +
+  geom_point(aes(x = Years, y = 全國平均年所得, color = "Taiwan")) +
+  scale_color_manual(values = c("#9393FF", "#AAAAFF"), name = "section") +
+  labs(x = "Years Group", y = "Average Annual Income")
+```
 
 
 各縣市差異
 =====================================     
    
-Row 
+Row
 -------------------------------------
+    
 ### 2001 ~ 2003
+
+    
 ```{r}
 ```
+
+
 ### 2004 ~ 2006
+    
 ```{r}
-```
+``` 
 
-Row 
+Row
 -------------------------------------
-
+    
 ### 2007 ~ 2010
+    
 ```{r}
 ```
+    
 ### 2007 ~ 2010
+
 ```{r}
 ```
