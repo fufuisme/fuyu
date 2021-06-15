@@ -3,7 +3,7 @@
     "path": "C:/Users/Irene/Desktop/R/fuyu/index.Rmd",
     "project_path": "index.Rmd",
     "type": "r_markdown",
-    "hash": "0",
+    "hash": "3982087659",
     "contents": "",
     "dirty": false,
     "created": 1623759060730.0,
@@ -13,15 +13,15 @@
         "tempName": "Untitled1",
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "64,13",
-        "scrollLine": "52"
+        "cursorPosition": "21,60",
+        "scrollLine": "9"
     },
     "folds": "",
-    "lastKnownWriteTime": 1623761513,
+    "lastKnownWriteTime": 1623761847,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1623761513,
+    "last_content_update": 1623761847864,
     "read_only": false,
     "read_only_alternatives": []
 }
