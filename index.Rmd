@@ -149,7 +149,8 @@ df$section = with(df,factor(section, levels=c("台北市","新北市","高雄市
 picture<-ggplot(data = df)+
   geom_bar(mapping=aes(x=section,y=percentage,fill=number),
            stat="identity")+
-  labs(title='2001-2003')
+  labs(title='2001-2003')+
+  theme(axis.text.x=element_text(size=4.6))
 
   
 picture
@@ -182,7 +183,8 @@ df_04_06$section = with(df, factor(section, levels=c("台北市","新北市","�
 picture_04_06<-ggplot(data = df_04_06)+
   geom_bar(mapping=aes(x=section,y=percentage,fill=number),
            stat = "identity")+
-  labs(title='2004-2006')
+  labs(title='2004-2006')+
+  theme(axis.text.x=element_text(size=4.6))
 
 picture_04_06
 
@@ -221,7 +223,8 @@ picture_07_10<-ggplot(data = df_07_10)+
   geom_bar(mapping=aes(x=section,y=percentage,fill=number),
            stat = "identity")+
   
-  labs(title='2007-2010')
+  labs(title='2007-2010')+
+  theme(axis.text.x=element_text(size=4.6))
 
 picture_07_10
 ```
@@ -250,7 +253,8 @@ df_11_14$section = with(df, factor(section, levels=c("台北市","新北市","�
 picture_11_14<-ggplot(data = df_11_14)+
   geom_bar(mapping=aes(x=section,y=percentage,fill=number),
            stat = "identity")+
-  labs(title='2011-2014')
+  labs(title='2011-2014')+
+  theme(axis.text.x=element_text(size=4.6))
 
 picture_11_14
 
