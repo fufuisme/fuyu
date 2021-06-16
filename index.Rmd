@@ -44,7 +44,7 @@ p <- ggplot(DadData) +
     geom_point(mapping = aes(x = degree, y = all, group=1), color = "#796400")
 ggplotly(p)
 ```
-> 橘色線為台大法學院一到四年級學生數據；藍線為18~22大學生；土色線為１８～２２歲全國人民
+> 橘色線為台大法學院一到四年級學生數據；藍線為18至22歲大學生；土色線為18至22歲全國人民
 
 ### 母親教育程度
 
@@ -153,8 +153,8 @@ picture<-ggplot(data = df)+
   geom_bar(mapping=aes(x=section,y=percentage,fill=number),
            stat="identity")+
   labs(title='2001-2003')+
-  theme(axis.text.x=element_text(size=4))+
-  scale_fill_manual(name="地區",values=c("#000079","#005AB5", "#0080FF", "#46A3FF", "#ACD6FF"))
+  theme(axis.text.x=element_text(size=4.6))+
+  scale_fill_manual(name="地區",values=c("#005AB5", "#000079",  "#46A3FF", "#0080FF", "#ACD6FF"))
 
   
 ggplotly(picture)
@@ -190,8 +190,8 @@ picture_04_06<-ggplot(data = df_04_06)+
   geom_bar(mapping=aes(x=section,y=percentage,fill=number),
            stat = "identity")+
   labs(title='2004-2006')+
-  theme(axis.text.x=element_text(size=4))+
-  scale_fill_manual(name="地區",values=c("#000079","#005AB5", "#0080FF", "#46A3FF", "#ACD6FF"))
+  theme(axis.text.x=element_text(size=4.6))+
+  scale_fill_manual(name="地區",values=c("#005AB5", "#000079",  "#46A3FF", "#0080FF", "#ACD6FF"))
 
 ggplotly(picture_04_06)
 
@@ -235,8 +235,8 @@ picture_07_10<-ggplot(data = df_07_10)+
            stat = "identity")+
   
   labs(title='2007-2010')+
-  theme(axis.text.x=element_text(size=4))+
-  scale_fill_manual(name="地區",values=c("#000079","#005AB5", "#0080FF", "#46A3FF", "#ACD6FF"))
+  theme(axis.text.x=element_text(size=4.6))+
+  scale_fill_manual(name="地區",values=c("#005AB5", "#000079",  "#46A3FF", "#0080FF", "#ACD6FF"))
 
 ggplotly(picture_07_10)
 ```
@@ -267,8 +267,8 @@ df_11_14$section = with(df, factor(section, levels=c(c("台北市","新北市","
 picture_11_14<-ggplot(data = df_11_14)+
   geom_bar(mapping=aes(x=section,y=percentage,fill=number),stat = "identity")+
   labs(title='2011-2014')+
-  theme(axis.text.x=element_text(size=4))+
-  scale_fill_manual(name="地區", values=c("#000079","#005AB5", "#0080FF", "#46A3FF", "#ACD6FF"))
+  theme(axis.text.x=element_text(size=4.6))+
+  scale_fill_manual(name="地區",values=c("#005AB5", "#000079",  "#46A3FF", "#0080FF", "#ACD6FF"))
 
 ggplotly(picture_11_14)
 
