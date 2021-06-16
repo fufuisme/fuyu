@@ -97,13 +97,14 @@ Row
 -------------------------------------
 ```{r}
 mydata <- readr::read_csv("C:/Users/Irene/Desktop/台大全國平均所得比較.csv")
-ggplot(data = mydata) +
+q <- ggplot(data = mydata) +
   geom_line(aes(x = Years, y = ntu, group = 1, color = "NTU")) +
   geom_point(aes(x = Years, y = ntu, color = "NTU")) +
   geom_line(aes(x = Years, y = all, group = 1, color = "Taiwan")) +
   geom_point(aes(x = Years, y = all, color = "Taiwan")) +
   scale_color_manual(values = c("#9393FF", "#AAAAFF"), name = "section") +
   labs(x = "Years Group", y = "Average Annual Income")
+ggplotly(q)
 ```
 
 
@@ -153,7 +154,7 @@ picture<-ggplot(data = df)+
   theme(axis.text.x=element_text(size=4.6))
 
   
-picture
+ggplotly(picture)
 ```
 
 
@@ -186,7 +187,7 @@ picture_04_06<-ggplot(data = df_04_06)+
   labs(title='2004-2006')+
   theme(axis.text.x=element_text(size=4.6))
 
-picture_04_06
+ggplotly(picture_04_06)
 
 ``` 
 
@@ -226,7 +227,7 @@ picture_07_10<-ggplot(data = df_07_10)+
   labs(title='2007-2010')+
   theme(axis.text.x=element_text(size=4.6))
 
-picture_07_10
+ggplotly(picture_07_10)
 ```
     
 ### 2011 ~ 2014
@@ -256,6 +257,6 @@ picture_11_14<-ggplot(data = df_11_14)+
   labs(title='2011-2014')+
   theme(axis.text.x=element_text(size=4.6))
 
-picture_11_14
+ggplotly(picture_11_14)
 
 ```
