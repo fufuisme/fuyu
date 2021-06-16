@@ -1,5 +1,5 @@
 ---
-title: "fuuyuu"
+title: "(NONAME)"
 output: 
   flexdashboard::flex_dashboard:
     orientation: rows
